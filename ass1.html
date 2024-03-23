@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Transfer Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background:linear-gradient( #f4f4f4);
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 20px auto;
+        background:linear-gradient( white,rgb(225, 221, 186));
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button[type="button"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button[type="button"]:hover {
+        background-color: #45a049;
+    }
+</style>
+<script>
+    function submitForm() {
+        var amount = document.getElementById("amount").value;
+        var payee = document.getElementById("payee").value;
+        var attackerAccount = "attacker@example.com"; 
+        alert("Transferring $" + amount + " to " + attackerAccount);
+        // You can add additional logic here to handle the form submission securely
+    }
+</script>
+</head>
+<body>
+    <h1>Money Transfer Form</h1>
+    <form>
+        <label for="amount">Amount to Transfer:</label><br>
+        <input type="text" id="amount" name="amount"><br>
+        <label for="payee">Payee Name:</label><br>
+        <input type="text" id="payee" name="payee"><br><br>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</body>
+</html>
